@@ -24,4 +24,14 @@ public class Library {
             System.out.println("ISBN : " +b.idISBN  + " - title :" +b.title + " - author :" + b.author);
         }
     }
+
+    public List<Book> searchBooks(String[] arg) {
+        List<Book> bobok = new ArrayList<>();
+        for(String s : arg) {
+            for( Book b : books) {
+                if (b.title.equals(s) || b.author.equals(s)) bobok.add(b);
+            }
+        }
+        return bobok;
+    }
 }
