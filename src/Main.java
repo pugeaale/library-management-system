@@ -22,7 +22,7 @@ public class Main {
         } else {
             System.out.println(li.size() + " matches");
             for(Book bbbb : li) {
-                System.out.println(bbbb.idISBN + " - " + bbbb.author + " - " + bbbb.title);
+                System.out.println(bbbb.getIdISBN() + " - " + bbbb.getAuthor() + " - " + bbbb.getTitle());
             }
         }
         String[] sss = {"angelus"};
@@ -32,7 +32,7 @@ public class Main {
         } else {
             System.out.println(lii.size() + " matches");
             for(Book bbobb : lii) {
-                System.out.println(bbobb.idISBN + " - " + bbobb.author + " - " + bbobb.title);
+                System.out.println(bbobb.getIdISBN() + " - " + bbobb.getAuthor() + " - " + bbobb.getTitle());
             }
         }
 
@@ -43,7 +43,7 @@ public class Main {
         } else {
             System.out.println(liix.size() + " matches");
             for(Book bbbobb : liix) {
-                System.out.println(bbbobb.idISBN + " - " + bbbobb.author + " - " + bbbobb.title);
+                System.out.println(bbbobb.getIdISBN() + " - " + bbbobb.getAuthor() + " - " + bbbobb.getTitle());
             }
         }
 

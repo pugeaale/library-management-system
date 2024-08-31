@@ -21,7 +21,7 @@ public class Library {
     public void displayBooks() {
         System.out.println(" Library List of books");
         for( Book b : books) {
-            System.out.println("ISBN : " +b.idISBN  + " - title :" +b.title + " - author :" + b.author);
+            System.out.println("ISBN : " +b.getIdISBN()  + " - title :" +b.getTitle() + " - author :" + b.getAuthor());
         }
     }
 
@@ -29,7 +29,7 @@ public class Library {
         List<Book> bobok = new ArrayList<>();
         for(String s : arg) {
             for( Book b : books) {
-                if (b.title.equals(s) || b.author.equals(s)) bobok.add(b);
+                if (b.getTitle().equals(s) || b.getAuthor().equals(s)) bobok.add(b);
             }
         }
         return bobok;
