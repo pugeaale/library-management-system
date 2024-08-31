@@ -25,13 +25,20 @@ public class Library {
         }
     }
 
-    public List<Book> searchBooks(String[] arg) {
+    public void searchBooks(String[] arg) {
         List<Book> bobok = new ArrayList<>();
         for(String s : arg) {
             for( Book b : books) {
                 if (b.getTitle().equals(s) || b.getAuthor().equals(s)) bobok.add(b);
             }
         }
-        return bobok;
+        if( bobok.isEmpty()) {
+            System.out.println("no book found");
+        } else {
+            System.out.println(bobok.size() + " matches");
+            for(Book bbbobb : bobok) {
+                System.out.println(bbbobb.getIdISBN() + " - " + bbbobb.getAuthor() + " - " + bbbobb.getTitle());
+            }
+        }
     }
 }
