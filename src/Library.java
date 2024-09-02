@@ -41,4 +41,18 @@ public class Library {
             }
         }
     }
+
+    public boolean borrowBook(Book b) {
+        if ( ! books.contains(b) || b.isBorrowed()) return false;
+        b.setBorrowed(true);
+        System.out.println("Book is borrowed");
+        return true;
+    }
+
+    public boolean returnBook(Book b) {
+        if ( ! books.contains(b) || ! b.isBorrowed() ) return false;
+        b.setBorrowed(false);
+        System.out.println(" Book is returned");
+        return true;
+    }
 }

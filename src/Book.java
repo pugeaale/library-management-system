@@ -5,10 +5,21 @@ public class Book {
     private String author;
     private String idISBN;
 
+    public boolean isBorrowed() {
+        return isBorrowed;
+    }
+
+    public void setBorrowed(boolean borrowed) {
+        isBorrowed = borrowed;
+    }
+
+    private boolean isBorrowed;
+
     public Book(String title, String author, String idISBN) {
         setTitle(title);
         setAuthor(author);
         setIdISBN(idISBN);
+        setBorrowed(false);
     }
 
     public String getTitle() {

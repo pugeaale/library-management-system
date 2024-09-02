@@ -1,5 +1,4 @@
 
-
 public class Main {
 
     public static void main(String[] args) {
@@ -28,6 +27,11 @@ public class Main {
         String[] args3 = {"angela", "angelus", "tchao"};
         library1.searchBooks(args3);
 
-
+        library1.borrowBook(book3);
+        System.out.println(library1.borrowBook(book3));
+        library1.returnBook(book3);
+        System.out.println(library1.returnBook(book3));
+        Book book4 = new Book("oxxa", "angel" , "100000033");
+        System.out.println(library1.borrowBook(book4));
     }
 }
